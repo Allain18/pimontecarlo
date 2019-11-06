@@ -4,9 +4,11 @@ import random
 import sys
 
 
-def main(arg):
+def main():
     """Fonction principale"""
-    total = int(arg)
+    total = int(sys.argv[1])
+    # TODO catch error
+
     inside = 0
 
     for _ in range(total):
@@ -20,4 +22,4 @@ def main(arg):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main()
