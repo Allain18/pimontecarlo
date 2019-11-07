@@ -7,7 +7,7 @@ import argparse
 def compute_pi(iteration):
     """Compute pi"""
 
-    assert type(iteration) is int
+    assert isinstance(iteration) is int
     inside = 0
 
     for _ in range(iteration):
