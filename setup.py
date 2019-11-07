@@ -29,8 +29,7 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8"
     ],
-    # test_suite="test",
-    # TODO add test
+    test_suite="test",
     entry_points={
         "console_scripts": [
             "pi=pi_montecarlo:main",
