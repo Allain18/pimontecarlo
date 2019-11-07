@@ -5,7 +5,7 @@ import argparse
 
 
 def compute_pi(iteration):
-    """Fonction principale"""
+    """Compute pi"""
 
     inside = 0
 
@@ -20,6 +20,10 @@ def compute_pi(iteration):
 
 
 def get_argument():
+    """
+    Get the command line argument
+    Number of iterations to compute pi
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "iteration", help="number of iterations to compute pi", type=int)
@@ -29,6 +33,9 @@ def get_argument():
 
 
 def main():
+    """
+    Entry point for command line
+    """
     iteration = get_argument().iteration
     compute_pi(iteration)
 
