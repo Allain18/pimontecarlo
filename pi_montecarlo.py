@@ -7,6 +7,7 @@ import argparse
 def compute_pi(iteration):
     """Compute pi"""
 
+    assert type(iteration) is int
     inside = 0
 
     for _ in range(iteration):
@@ -16,7 +17,9 @@ def compute_pi(iteration):
         if (x_coord**2 + y_coord**2) < 1:
             inside += 1
 
-    print(inside/iteration*4)
+    pi_aprox = inside/iteration*4
+
+    return pi_aprox
 
 
 def get_argument():
@@ -37,7 +40,7 @@ def main():
     Entry point for command line
     """
     iteration = get_argument().iteration
-    compute_pi(iteration)
+    print(compute_pi(iteration))
 
 
 if __name__ == "__main__":
