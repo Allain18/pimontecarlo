@@ -47,6 +47,8 @@ def compute_pi(iteration, show_plot):
     else:
         print(pi_aprox)
 
+    return pi_aprox
+
 
 def get_argument():
     """
