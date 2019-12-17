@@ -18,6 +18,7 @@ setup(
     url="https://github.com/Allain18/pimontecarlo",
     license="MIT License",
     keywords="pi monte carlo",
+    install_requires=["matplotlib"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
