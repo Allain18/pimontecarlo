@@ -4,7 +4,7 @@ import random
 import argparse
 
 
-def compute_pi(iteration):
+def compute_pi(iteration, show_plot):
     """Compute pi"""
 
     assert isinstance(iteration, int)
@@ -30,6 +30,8 @@ def get_argument():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "iteration", help="number of iterations to compute pi", type=int)
+    parser.add_argument(
+        "-p", "--plot", help="Show the position of the point", action="store_true")
     args = parser.parse_args()
 
     return args
@@ -39,8 +41,10 @@ def main():
     """
     Entry point for command line
     """
-    iteration = get_argument().iteration
-    print(compute_pi(iteration))
+    arg = get_argument()
+    iteration = arg.iteration
+    show_plot = arg.plot
+    compute_pi(iteration, show_plot)
 
 
 if __name__ == "__main__":
