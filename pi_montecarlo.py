@@ -36,9 +36,11 @@ def compute_pi(iteration, show_plot):
         plot = plt.gca()
         plot.set_xlim(0, 1)
         plot.set_ylim(0, 1)
+        circle = plt.Circle((0, 0), 1, color="g")
         plot.plot(x_inside, y_inside, "bo")
         plot.plot(x_outside, y_outside, "ro")
 
+        plot.add_artist(circle)
         plt.xlabel("pi = {}".format(pi_aprox))
         plt.show()
 
