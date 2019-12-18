@@ -45,6 +45,8 @@ def compute_pi(iteration, show_plot):
 
         axe.set_xlabel("pi = {}".format(pi_aprox))
 
+        mng = plt.get_current_fig_manager()
+        mng.window.state('zoomed')
         plt.show()
 
     else:
