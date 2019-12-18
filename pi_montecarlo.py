@@ -31,17 +31,20 @@ def compute_pi(iteration, show_plot):
     pi_aprox = inside/iteration*4
 
     if show_plot:
-        plt.figure(num="Pi")
-        plt.title("Pi")
-        plot = plt.gca()
-        plot.set_xlim(0, 1)
-        plot.set_ylim(0, 1)
-        circle = plt.Circle((0, 0), 1, color="g")
-        plot.plot(x_inside, y_inside, "bo")
-        plot.plot(x_outside, y_outside, "ro")
+        fig = plt.figure(num="Pi")
+        axe = fig.add_subplot(1, 1, 1)
+        axe.set_aspect(aspect=1)
+        axe.set_xlim(0, 1)
+        axe.set_ylim(0, 1)
 
-        plot.add_artist(circle)
-        plt.xlabel("pi = {}".format(pi_aprox))
+        axe.plot(x_inside, y_inside, "bo")
+        axe.plot(x_outside, y_outside, "ro")
+
+        circle = plt.Circle((0, 0), 1, color="g")
+        axe.add_artist(circle)
+
+        axe.set_xlabel("pi = {}".format(pi_aprox))
+
         plt.show()
 
     else:
