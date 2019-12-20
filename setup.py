@@ -7,18 +7,22 @@ from setuptools import setup
 with open("README.md") as readme_file:
     README = readme_file.read()
 
+with open("requirements.txt") as req_file:
+    REQ = req_file.read()
+
 
 setup(
     name="pi calculator",
     version="0.1.0",
-    description="Compute pi with the monte carlo temethodchnic",
+    description="Compute pi with the monte carlo technic",
     long_description=README,
     author="Alain Girard",
     author_email="alaingirardvd@gmail.com",
     url="https://github.com/Allain18/pimontecarlo",
     license="MIT License",
     keywords="pi monte carlo",
-    install_requires=["matplotlib"],
+    install_requires=REQ,
+    py_modules=["pi_montecarlo"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
