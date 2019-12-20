@@ -16,10 +16,10 @@ def compute_pi(iteration, show_plot=False):
     y_outside = []
 
     for _ in range(iteration):
-        x_coord = random.random()
-        y_coord = random.random()
+        x_coord = random.random() * 2 - 1
+        y_coord = random.random() * 2 - 1
 
-        if (x_coord**2 + y_coord**2) < 1:
+        if (abs(x_coord)**2 + abs(y_coord**2)) < 1:
             x_inside.append(x_coord)
             y_inside.append(y_coord)
             inside += 1
@@ -33,8 +33,8 @@ def compute_pi(iteration, show_plot=False):
         fig = plt.figure(num="Pi")
         axe = fig.add_subplot(1, 1, 1)
         axe.set_aspect(aspect=1)
-        axe.set_xlim(0, 1)
-        axe.set_ylim(0, 1)
+        axe.set_xlim(-1, 1)
+        axe.set_ylim(-1, 1)
 
         axe.plot(x_inside, y_inside, "bo")
         axe.plot(x_outside, y_outside, "ro")
