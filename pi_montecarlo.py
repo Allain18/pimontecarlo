@@ -5,10 +5,9 @@ import argparse
 import matplotlib.pyplot as plt
 
 
-def compute_pi(iteration, show_plot):
+def compute_pi(iteration, show_plot=False):
     """Compute pi"""
 
-    assert isinstance(iteration, int)
     inside = 0
     x_inside = []
     y_inside = []
